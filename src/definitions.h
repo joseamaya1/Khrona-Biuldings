@@ -20,11 +20,11 @@
 #ifndef FS_DEFINITIONS_H_877452FEC245450C9F96B8FD268D8963
 #define FS_DEFINITIONS_H_877452FEC245450C9F96B8FD268D8963
 
-static constexpr auto STATUS_SERVER_NAME = "OTX Server";
+static constexpr auto STATUS_SERVER_NAME = "Khrona Global";
 static constexpr auto STATUS_SERVER_VERSION = "3";
 static constexpr auto MINOR_VERSION = "10";
-static constexpr auto STATUS_SERVER_DEVELOPERS = "Matt Gomez, Leandro Brewster, Erick Nunes, Joao Leonardo Pereira, Bruno Carvalho, Charles Kassab, OTX Contributors and The Forgotten Server Developers";
-static constexpr auto GIT_REPO = "https://github.com/mattyx14/otxserver/tree/otxserv3/";
+static constexpr auto STATUS_SERVER_DEVELOPERS = "Khrona Inc. And TFS Developers";
+static constexpr auto GIT_REPO = "https://github.com/joseamaya1/Khrona-Biuldings";
 
 static constexpr auto CLIENT_VERSION_MIN = 1100;
 static constexpr auto CLIENT_VERSION_MAX = 1147;
