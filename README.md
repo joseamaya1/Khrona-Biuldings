@@ -1,4 +1,4 @@
-# OTXServer Full Global Daily Updated!  [![Travis-CI Build Status](https://travis-ci.org/malucooo/Otxserver-New.svg?branch=master)](https://travis-ci.org/malucooo/Otxserver-New) [![Appveyor Build Status](https://ci.appveyor.com/api/projects/status/github/malucooo/otxserver-new?branch=master&svg=true)](https://ci.appveyor.com/project/malucooo/otxserver-new/) 
+# OTXServer Full Global Daily Updated!  [![Travis-CI Build Status](https://travis-ci.org/malucooo/Otxserver-New.svg?branch=master)](https://travis-ci.org/malucooo/Otxserver-New) [![Appveyor Build Status](https://ci.appveyor.com/project/joseamaya1/khrona-biuldings?branch=master&svg=true)](https://ci.appveyor.com/project/joseamaya1/khrona-biuldings) 
 
 Servidor de Tibia mantido por Malucooo. O servidor usa como base OTX Server 3.10.
 
