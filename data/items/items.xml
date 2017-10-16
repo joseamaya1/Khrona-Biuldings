@@ -22770,6 +22770,7 @@
 		<attribute key="weight" value="840" />
 	</item>
 	<item id="12425" article="a" name="hunter's quiver" plural="hunter quivers">
+		<attribute key="containerSize" value="20" />
 		<attribute key="weight" value="132" />
 	</item>
 	<item id="12426" article="a" name="jewelled belt">

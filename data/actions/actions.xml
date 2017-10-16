@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
 
+	<!-- Owner Backpack -->
+	<action itemid="2000" script="ownbp.lua"/>
+	
 	<!-- Store -->
 	<action itemid="26378" script="other/goldconverter.lua" />
 	<action itemid="26347" script="other/fishtank.lua"/>
