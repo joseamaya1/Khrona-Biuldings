@@ -451,7 +451,7 @@ void Weapon::onUsedWeapon(Player* player, Item* item, Tile* destTile) const
          
 					ss << "Your " << item->getPluralName() << " were charged.";
          
-						player->sendTextMessage(MESSAGE_STATUS_SMALL, ss.str());
+						player->sendTextMessage(MESSAGE_INFO_DESCR, ss.str());
 						break;
 			}  
      
