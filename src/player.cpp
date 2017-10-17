@@ -1,4 +1,4 @@
-/**
+Item* Player::getWeapon(slots_t slot, bool ignoreAmmo) const/**
  * The Forgotten Server - a free and open-source MMORPG server emulator
  * Copyright (C) 2017 Mark Samman <mark.samman@gmail.com>
  *
@@ -220,6 +220,25 @@ Item* Player::getWeapon(slots_t slot, bool ignoreAmmo) const
 	if (!ignoreAmmo && weaponType == WEAPON_DISTANCE) {
 		const ItemType& it = Item::items[item->getID()];
 		if (it.ammoType != AMMO_NONE) {
+			/*edit for quiver*/
+            if (!ammoItem)
+            {
+                return nullptr;
+            }
+           
+            if (Container* container = ammoItem->getContainer())
+            {
+                for (ContainerIterator iter = container->iterator(); iter.hasNext(); iter.advance())
+                {
+                    const ItemType& itr = Item::items[(*iter)->getID()];
+                    if (itr.ammoType == it.ammoType)
+                    {
+                        item = (*iter);
+                        return item;
+                    }
+                }
+            }
+            /*end of edit*/
 			Item* ammoItem = inventory[CONST_SLOT_AMMO];
 			if (!ammoItem || ammoItem->getAmmoType() != it.ammoType) {
 				return nullptr;
