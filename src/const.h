@@ -606,6 +606,7 @@ enum NameEval_t : uint8_t {
 static constexpr int32_t CHANNEL_GUILD = 0x00;
 static constexpr int32_t CHANNEL_PARTY = 0x01;
 static constexpr int32_t CHANNEL_PRIVATE = 0xFFFF;
+static constexpr int32_t CHANNEL_LOOT = 0x09;
 
 static constexpr int32_t CHANNEL_CAST = 40;
 const std::string LIVE_CAST_CHAT_NAME = "Live Cast Chat";
