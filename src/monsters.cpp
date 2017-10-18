@@ -115,7 +115,7 @@ void MonsterType::createLoot(Container* corpse)
 			} else {
 				owner->sendTextMessage(MESSAGE_LOOT, ss.str());
 			}
-			owner->sendChannelMessage("", ss.str(), TALKTYPE_CHANNEL_Y, CHANNEL_LOOT);
+			owner->sendChannelMessage("", ss.str(), MESSAGE_LOOT, CHANNEL_LOOT);
 		}
 	} else {
 		std::ostringstream ss;
