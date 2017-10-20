@@ -757,7 +757,7 @@
 	<house name="Theater Avenue 6b" houseid="2183" entryx="32376" entryy="31794" entryz="6" rent="820" townid="4" size="11" />
 	<house name="East Lane 1a" houseid="2184" entryx="32393" entryy="31796" entryz="7" rent="2260" townid="4" size="48" />
 	<house name="East Lane 1b" houseid="2185" entryx="32396" entryy="31801" entryz="6" rent="1700" townid="4" size="34" />
-	<house name="East Lane 2" houseid="2186" entryx="32399" entryy="31798" entryz="7" rent="3900" townid="4" size="86" />
+	<house name="East Lane 2" houseid="2186" entryx="32399" entryy="31798" entryz="7" rent="3900" townid="4" size="88" />
 	<house name="Northern Street 5" houseid="2191" entryx="32380" entryy="31772" entryz="7" rent="1980" townid="4" size="41" />
 	<house name="Northern Street 7" houseid="2192" entryx="32389" entryy="31774" entryz="7" rent="1700" townid="4" size="34" />
 	<house name="Northern Street 3a" houseid="2193" entryx="32368" entryy="31767" entryz="6" rent="740" townid="4" size="11" />
@@ -1026,7 +1026,7 @@
 	<house name="Antimony Lane 2" houseid="2468" entryx="33637" entryy="31921" entryz="6" rent="4745" townid="33" size="92" />
 	<house name="Vanward Flats B" houseid="2469" entryx="33614" entryy="31935" entryz="6" rent="7410" townid="33" size="144" />
 	<house name="Vanward Flats A" houseid="2470" entryx="33621" entryy="31935" entryz="6" rent="7410" townid="33" size="145" />
-	<house name="Bronze Brothers Bastion" houseid="2471" entryx="33599" entryy="31933" entryz="6" rent="35205" guildhall="true" townid="33" size="723" />
+	<house name="Bronze Brothers Bastion" houseid="2471" entryx="33599" entryy="31933" entryz="6" rent="35205" guildhall="true" townid="33" size="722" />
 	<house name="Antimony Lane 1" houseid="2472" entryx="33656" entryy="31915" entryz="6" rent="7105" townid="33" size="134" />
 	<house name="Rathleton Hills Estate" houseid="2473" entryx="33662" entryy="31917" entryz="6" rent="20685" guildhall="true" townid="33" size="393" />
 	<house name="Rathleton Hills Residence" houseid="2474" entryx="33651" entryy="31910" entryz="6" rent="7085" townid="33" size="138" />
