@@ -480,7 +480,7 @@ function Player.applyImbuement(self, msg)
 	end
 
 	-- Remove o dinheiro.
-	self:setBankBalance(self:getBankBalance() - ValorTotal)
+	self:removeMoneyNpc(ValorTotal)
 
 	-- Faz a contagem de % para o item quebrar caso nao esteja usando Proteção .
 	if (useProtection == 0) then

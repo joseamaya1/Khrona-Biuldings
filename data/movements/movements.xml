@@ -7,18 +7,18 @@
 <!-- Halls of Hope TPs -->
 <movevent event="StepIn" actionid="62147" script="hallsofhope/death.lua" />
 <movevent event="StepIn" actionid="62148" script="hallsofhope/energy.lua" />
-<movevent event="StepIn" actionid="62149" script="hallsofhope/hearth.lua" />
+<movevent event="StepIn" actionid="62149" script="hallsofhope/earth.lua" />
 <movevent event="StepIn" actionid="62150" script="hallsofhope/fire.lua" />
 <movevent event="StepIn" actionid="62151" script="hallsofhope/ice.lua" />
 <movevent event="StepIn" actionid="62152" script="hallsofhope/holly.lua" />
 
-<movevent event="StepIn" actionid="62153" script="hallsofhope/hearthfonte.lua" />
+<movevent event="StepIn" actionid="62153" script="hallsofhope/earthfonte.lua" />
 <movevent event="StepIn" actionid="62154" script="hallsofhope/fire2.lua" />
 <movevent event="StepIn" actionid="62155" script="hallsofhope/fire2exit.lua" />
 <movevent event="StepIn" actionid="62156" script="hallsofhope/fireexit.lua" />
 <movevent event="StepIn" actionid="62157" script="hallsofhope/deathexit.lua" />
 <movevent event="StepIn" actionid="62158" script="hallsofhope/energyexit.lua" />
-<movevent event="StepIn" actionid="62159" script="hallsofhope/hearthexit.lua" />
+<movevent event="StepIn" actionid="62159" script="hallsofhope/earthexit.lua" />
 <movevent event="StepIn" actionid="62160" script="hallsofhope/iceexit.lua" />
 <movevent event="StepIn" actionid="62161" script="hallsofhope/hollyexit.lua" />
 <movevent event="StepIn" actionid="62162" script="hallsofhope/tprosa.lua" />
@@ -109,14 +109,14 @@
 	<movevent event="StepIn" fromuid="9069" touid="9120" script="others/shrinesportal.lua" />
 	<movevent event="StepIn" actionid="9117" script="others/shrinesportal_out.lua" />
 
-	<!-- oramond caterot -->
+	<!-- oramond -->
 	<movevent event="StepIn" actionid="42626" script="oramond/enterOramond.lua" />
 	<movevent event="StepIn" actionid="42627" script="oramond/enterOramond.lua" />
 	<movevent event="StepIn" actionid="42628" script="oramond/votingOramond.lua" />
-	<movevent event="StepIn" actionid="42630" script="oramond/enterCidade.lua" />
-	<movevent event="StepIn" actionid="42631" script="oramond/enterCidade.lua" />
-	<movevent event="StepIn" actionid="36489" script="oramond/enterBuero.lua" />
-	<movevent event="StepIn" actionid="50389" script="oramond/enterBuero.lua" />
+	<movevent event="StepIn" actionid="42630" script="oramond/enterCity.lua" />
+	<movevent event="StepIn" actionid="42631" script="oramond/enterCity.lua" />
+	<movevent event="StepIn" actionid="36489" script="oramond/enterGlooth.lua" />
+	<movevent event="StepIn" actionid="50389" script="oramond/enterGlooth.lua" />
 	<movevent event="StepIn" actionid="50390" script="oramond/fibula.lua" />
 	<movevent event="StepIn" uniqueid="26798" script="others/seacrest.lua" />
 	

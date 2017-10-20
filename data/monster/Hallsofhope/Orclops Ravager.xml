@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Orclops Ravager" nameDescription="a Orclops Ravager" race="blood" experience="1600" speed="150" manacost="290">
-	<health now="2" max="2" />
-	<look type="935" corpse="27480" />
+	<health now="1200" max="1200" />
+	<look type="935" corpse="27742" />
 	<targetchange interval="5000" chance="0" />
 	<flags>
 		<flag summonable="0" />

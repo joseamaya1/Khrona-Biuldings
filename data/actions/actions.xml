@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
 
-	<!-- Owner Backpack -->
-	<action itemid="2000" script="ownbp.lua"/>
-	
 	<!-- Store -->
 	<action itemid="26378" script="other/goldconverter.lua" />
 	<action itemid="26347" script="other/fishtank.lua"/>
@@ -76,7 +73,7 @@
 	<action fromid="27842" toid="27843" script="imbuement.lua" />
 	
     <!-- Ferumbras Ascedant Quest -->
-    <action itemid="25521" script="FerumbrasAscedantQuest/RiftRunner.lua"/>
+    <action itemid="24763" script="FerumbrasAscedantQuest/RiftRunner.lua"/>
     <action itemid="24838" script="FerumbrasAscedantQuest/Teleportationrod.lua"/>
     <action actionid="53690" script="FerumbrasAscedantQuest/puminboss.lua"/>
     <action actionid="53691" script="FerumbrasAscedantQuest/alavancaTafariel.lua"/>
@@ -351,7 +348,6 @@
 	<action itemid="22608" script="other/taming.lua" />
 	<action itemid="23810" script="other/taming.lua" />
 	<action itemid="23557" script="other/taming.lua" />
-	<action itemid="24763" script="mounts/mounts.lua"/>
 	<action itemid="26194" script="mounts/mounts.lua"/>
 	<action itemid="26340" script="mounts/mounts.lua"/>
 	<action itemid="26341" script="mounts/mounts.lua"/>
@@ -948,7 +944,6 @@
 	<action itemid="20255" script="other/constructionkits.lua" />
 	<action itemid="20257" script="other/constructionkits.lua" />
 
-	<action itemid="24683" script="vipbless.lua"/>
 	
 	<action fromid="7904" toid="7907" script="other/bed_modification_kits.lua" />
 	<action itemid="20252" script="other/bed_modification_kits.lua" />

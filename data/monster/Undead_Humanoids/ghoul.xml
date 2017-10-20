@@ -56,5 +56,6 @@
 		<item name="rotten piece of cloth" chance="14470" />
 		<item name="ghoul snack" chance="5130" />
 		<item name="pile of grave earth" chance="950" />
+		<item id="26654" chance="1000" /> <!-- heavy old tome -->
 	</loot>
 </monster>

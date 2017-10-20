@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Sword Of Vengeance" nameDescription="a Sword Of Vengeance" race="undead" experience="0" speed="100" manacost="0">
 	<health now="500" max="500" />
-	<look typeex="26883" />
+	<look typeex="26895" />
 	<targetchange interval="2000" chance="0" />
 	<flags>
 		<flag summonable="0" />

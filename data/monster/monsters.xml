@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters>
+    <!-- NOSTALGIA -->		
+	<monster file="Nostalgia/old_bear.xml" name="BearOld"/>
+	<monster file="Nostalgia/old_bonelord.xml" name="BonelordOld"/>
+	<monster file="Nostalgia/old_bug.xml" name="BugOld"/>
+	<monster file="Nostalgia/old_giant_spider.xml" name="Giant SpiderOld"/>
+	<monster file="Nostalgia/old_pig.xml" name="PigOld"/>
+	<monster file="Nostalgia/old_spider.xml" name="SpiderOld"/>
+	<monster file="Nostalgia/old_wasp.xml" name="WaspOld"/>
+	<monster file="Nostalgia/old_wolf.xml" name="WolfOld"/>
+
     <!-- DAWNPORT -->		
 	<monster file="Dawnport/weakened_shlorg.xml" name="Weakened Shlorg"/>
 	<monster file="Dawnport/mountain troll.xml" name="Mountain Troll"/>
@@ -32,16 +42,16 @@
 	<monster name="Grovebeast" file="Summons/Grovebeast.xml" />
 
 	<!--Feiryst-->
-	<monster name="Faun" file="feyrist/faun.xml" />
-	<monster name="Dark Faun" file="feyrist/dark faun.xml" />
-	<monster name="Enfeebled Silencer" file="feyrist/enfeebled silencer.xml" />
-	<monster name="Weakened Frazzlemaw" file="feyrist/weakened frazzlemaw.xml" />	   
-	<monster name="Pixie" file="feyrist/pixie.xml" />	   
-	<monster name="Pooka" file="feyrist/pooka.xml" />	   
-	<monster name="Twisted Pooka" file="feyrist/twisted pooka.xml" />	   
-	<monster name="Nymph" file="feyrist/nymph.xml" />	   
-	<monster name="Boogy" file="feyrist/boogy.xml" />	   
-	<monster name="Swan Maiden" file="feyrist/swan maiden.xml" />	   
+	<monster name="Faun" file="Feyrist/faun.xml" />
+	<monster name="Dark Faun" file="Feyrist/dark_faun.xml" />
+	<monster name="Enfeebled Silencer" file="Feyrist/enfeebled_silencer.xml" />
+	<monster name="Weakened Frazzlemaw" file="Feyrist/weakened_frazzlemaw.xml" />	   
+	<monster name="Pixie" file="Feyrist/pixie.xml" />	   
+	<monster name="Pooka" file="Feyrist/pooka.xml" />	   
+	<monster name="Twisted Pooka" file="Feyrist/twisted_pooka.xml" />	   
+	<monster name="Nymph" file="Feyrist/nymph.xml" />	   
+	<monster name="Boogy" file="Feyrist/boogy.xml" />	   
+	<monster name="Swan Maiden" file="Feyrist/swan_maiden.xml" />	   
 	
 	<!-- Otherworld Hallsofhope bosses -->
 	<monster name="Lady Tenebris" file="Hallsofhope/bosses/Lady Tenebris.xml" />
@@ -59,7 +69,6 @@
    
     <!-- Halls of Hope -->
 	<monster name="A Shielded Astral Glyph" file="Hallsofhope/A Shielded Astral Glyph.xml" />
-	<monster name="Stone Rhino" file="Hallsofhope/Stone Rhino.xml" />
 	<monster name="An Observer Eye (Imune)" file="Hallsofhope/An Observer Eye (Imune).xml" />
 	<monster name="Angry Plant" file="Hallsofhope/Angry Plant.xml" />
 	<monster name="Animated Sword" file="Hallsofhope/Animated Sword.xml" />
@@ -73,13 +82,38 @@
 	<monster name="Cosmic Energy Prism C" file="Hallsofhope/Cosmic Energy Prism C.xml" />
 	<monster name="Cosmic Energy Prism D" file="Hallsofhope/Cosmic Energy Prism D.xml" />
 	<monster name="Diamond Servant Replica" file="Hallsofhope/Diamond Servant Replica.xml" />
-	<monster name="Golden Servant Replica" file="Hallsofhope/Golden Servant Replica.xml" />
 	<monster name="Dragon Essence" file="Hallsofhope/Dragon Essence.xml" />
 	<monster name="Dragon Warden" file="Hallsofhope/Dragon Warden.xml" />
+	<monster name="Golden Servant Replica" file="Hallsofhope/Golden Servant Replica.xml" />
+	<monster name="Fallen Challenger" file="Hallsofhope/Fallen Challenger.xml" />  
+	<monster name="Frozen Man" file="Hallsofhope/Frozen Man.xml" />  
+	<monster name="Frozen Minion" file="Hallsofhope/Frozen Minion.xml" />  
+	<monster name="Ice Dragon" file="Hallsofhope/Ice Dragon.xml" />  
+	<monster name="Icicle" file="Hallsofhope/Icicle.xml" />  
+	<monster name="Iron Servant Replica" file="Hallsofhope/Iron Servant Replica.xml" />
+	<monster name="Lost Time" file="Hallsofhope/Lost Time.xml" />
 	<monster name="Orclops Doomhauler" file="Hallsofhope/Orclops Doomhauler.xml" />
 	<monster name="Orclops Ravager" file="Hallsofhope/Orclops Ravager.xml" />
-	<monster name="Twisted Shaper" file="Hallsofhope/Twisted Shaper.xml" />
+	<monster name="Pinata Dragon" file="Hallsofhope/Pinata Dragon.xml" />
+	<monster name="Possessed Tree" file="Hallsofhope/Possessed Tree.xml" />
+	<monster name="Shadow Fiend" file="Hallsofhope/Shadow Fiend.xml" />  
+	<monster name="Shadow Tentacle" file="Hallsofhope/Shadow Tentacle.xml" />  
 	<monster name="Shaper Matriarch" file="Hallsofhope/Shaper Matriarch.xml" />  
+	<monster name="Somewhat Beatable" file="Hallsofhope/Somewhat Beatable.xml" />  
+	<monster name="Spirit of Fertility" file="Hallsofhope/Spirit of Fertility.xml" />  
+	<monster name="Stone Rhino" file="Hallsofhope/Stone Rhino.xml" />
+	<monster name="Twisted Shaper" file="Hallsofhope/Twisted Shaper.xml" />
+	<monster name="The Astral Source" file="Hallsofhope/The Astral Source.xml" />
+	<monster name="The Distorted Astral Source" file="Hallsofhope/The Distorted Astral Source.xml" />
+	<monster name="Thorn Minion" file="Hallsofhope/Thorn Minion.xml" />
+	<monster name="Time Keeper" file="Hallsofhope/Time Keeper.xml" />
+	<monster name="Time Waster" file="Hallsofhope/Time Waster.xml" />
+	<monster name="Twisted Shaper" file="Hallsofhope/Twisted Shaper.xml" />
+	<monster name="Unbeatable Dragon" file="Hallsofhope/Unbeatable Dragon.xml" />
+	<monster name="Unbound Blightwalker" file="Hallsofhope/Unbound Blightwalker.xml" />
+	<monster name="Unbound Defiler" file="Hallsofhope/Unbound Defiler.xml" />
+	<monster name="Unbound Demon Outcast" file="Hallsofhope/Unbound Demon Outcast.xml" />
+	<monster name="Unbound Demon" file="Hallsofhope/Unbeatable Dragon.xml" />
 
 	<!-- Otherworld -->
 	<monster name="Instable Breach Brood" file="Otherworld/Instable Breach BroodSummon.xml" />
@@ -308,12 +342,14 @@
 
 	<!-- Bosses -->
 	<monster name="Abyssador" file="Bosses/abyssador.xml" />
+	<monster name="Ascending Ferumbras" file="Bosses/Ascending Ferumbras.xml" />
 	<monster name="Annihilon" file="Bosses/annihilon.xml" />
 	<monster name="Apocalypse" file="Bosses/apocalypse.xml" />
 	<monster name="Apprentice Sheng" file="Bosses/apprentice_sheng.xml" />
 	<monster name="Arachir the Ancient One" file="Bosses/arachir_the_ancient_one.xml" />
 	<monster name="Armenius" file="Bosses/armenius.xml" />
 	<monster name="Azerus" file="Bosses/azerus.xml" />
+	<monster name="Azerus2" file="Bosses/azerus2.xml" />
 	<monster name="Barbaria" file="Bosses/barbaria.xml" />
 	<monster name="Baron Brute" file="Bosses/baron_brute.xml" />
 	<monster name="Battlemaster Zunzu" file="Bosses/battlemaster_zunzu.xml" />
@@ -344,6 +380,9 @@
 	<monster name="Fatality" file="Bosses/fatality.xml" />
 	<monster name="Fernfang" file="Bosses/fernfang.xml" />
 	<monster name="Ferumbras" file="Bosses/ferumbras.xml" />
+	<monster name="Ferumbras Essence" file="Bosses/Ferumbras Essence.xml" />
+	<monster name="Ferumbras Mortal Shell" file="Bosses/Ferumbras Mortal Shell.xml" />
+	<monster name="Ferumbras Soul Splinter" file="Bosses/Ferumbras Soul Splinter.xml" />
 	<monster name="Fleshslicer" file="Bosses/fleshslicer.xml" />
 	<monster name="Fluffy" file="Bosses/fluffy.xml" />
 	<monster name="Foreman Kneebiter" file="Bosses/foreman_kneebiter.xml" />
@@ -390,6 +429,7 @@
 	<monster name="Morik the Gladiator" file="Bosses/morik_the_gladiator.xml" />
 	<monster name="Mr. Punish" file="Bosses/mr._punish.xml" />
 	<monster name="Munster" file="Bosses/munster.xml" />
+	<monster name="Mutated Zalamon" file="Bosses/mutated zalamon.xml" />
 	<monster name="Necropharus" file="Bosses/necropharus.xml" />
 	<monster name="Obujos" file="Bosses/obujos.xml" />
 	<monster name="Orshabaal" file="Bosses/orshabaal.xml" />
@@ -423,6 +463,7 @@
 	<monster name="The Frog Prince" file="Bosses/the_frog_prince.xml" />
 	<monster name="The Handmaiden" file="Bosses/the_handmaiden.xml" />
 	<monster name="The Horned Fox" file="Bosses/the_horned_fox.xml" />
+	<monster name="The Keeper" file="Bosses/the keeper.xml" />
 	<monster name="The Imperor" file="Bosses/the_imperor.xml" />
 	<monster name="The Many" file="Bosses/the_many.xml" />
 	<monster name="The Noxious Spawn" file="Bosses/the_noxious_spawn.xml" />
@@ -530,7 +571,7 @@
 	<monster name="Shaburak Lord" file="Demons/shaburak_lord.xml" />
 	<monster name="Shaburak Prince" file="Demons/shaburak_prince.xml" />
 	<monster name="Yielothax" file="Demons/yielothax.xml" />
-    <monster name="Rift Invader" file="Demons/rift invader.xml"/>	
+    <monster name="Rift Invader" file="Demons/rift_invader.xml"/>	
 
 	<!-- Djinn -->
 	<monster name="Blue Djinn" file="Djinn/blue_djinn.xml" />
@@ -547,6 +588,7 @@
 	<monster name="Elder Wyrm" file="Dragons/elder_wyrm.xml" />
 	<monster name="Frost Dragon" file="Dragons/frost_dragon.xml" />
 	<monster name="Frost Dragon Hatchling" file="Dragons/frost_dragon_hatchling.xml" />
+	<monster name="Haunted Dragon" file="Dragons/haunted_dragon.xml" />
 	<monster name="Undead Dragon" file="Dragons/undead_dragon.xml" />
 	<monster name="Wyrm" file="Dragons/wyrm.xml" />
 	<monster name="Ghastly Dragon" file="Dragons/ghastly_dragon.xml" />
@@ -704,7 +746,7 @@
 	<monster name="Goblin Assassin" file="Goblins/goblin_assassin.xml" />
 	<monster name="Goblin Leader" file="Goblins/goblin_leader.xml" />
 	<monster name="Goblin Scavenger" file="Goblins/goblin_scavenger.xml" />
-	<monster name="Demon (Goblin)" file="Goblins/demon_(goblin).xml" />
+	<monster name="Demon Goblin" file="Goblins/demon_goblin.xml" />
 
 	<!-- Hydro-Elementals -->
 	<monster name="Massive Water Elemental" file="Hydro-Elementals/massive_water_elemental.xml" />

@@ -1,4 +1,5 @@
 dofile('data/lib/libs.lua')
+dofile('data/lib/mount_rent.lua')
 
 NOT_MOVEABLE_ACTION = 8000
 PARTY_PROTECTION = 1 -- Set to 0 to disable.

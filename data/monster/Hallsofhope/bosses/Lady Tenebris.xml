@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Lady Tenebris" nameDescription="a Lady Tenebris" race="undead" experience="50000" speed="1000" manacost="0">
 	<health now="250000" max="250000" />
-	<look type="433" head="57" body="95" legs="38" feet="94" addons="2" corpse="6068" />
+	<look type="433" head="57" body="95" legs="38" feet="94" addons="2" corpse="6081" />
 	<targetchange interval="2000" chance="20" />
 	<flags>
        

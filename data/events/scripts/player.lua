@@ -4,8 +4,7 @@ ITEM_STORE_INBOX = 26052
 GOLD_POUNCH = 26377
 
 -- No move items with actionID 8000
--- Players cannot throw items on teleports if set to true
-local blockTeleportTrashing = true
+NOT_MOVEABLE_ACTION = 8000
 
 -- Players cannot throw items on teleports if set to true
 local blockTeleportTrashing = true
@@ -189,6 +188,55 @@ function Player:onLookInShop(itemType, count)
 	return true
 end
 
+local config = {
+    maxItemsPerSeconds = 1,
+    exhaustTime = 2000,
+}
+
+if not pushDelay then
+    pushDelay = { }
+end
+
+local function antiPush(self, item, count, fromPosition, toPosition, fromCylinder, toCylinder)
+    if toPosition.x == CONTAINER_POSITION then
+        return true
+    end
+
+    local tile = Tile(toPosition)
+    if not tile then
+        self:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
+        return false
+    end
+
+    local cid = self:getId()
+    if not pushDelay[cid] then
+        pushDelay[cid] = {items = 0, time = 0}
+    end
+
+    pushDelay[cid].items = pushDelay[cid].items + 1
+
+    local currentTime = os.mtime()
+    if pushDelay[cid].time == 0 then
+        pushDelay[cid].time = currentTime
+    elseif pushDelay[cid].time == currentTime then
+        pushDelay[cid].items = pushDelay[cid].items + 1
+    elseif currentTime > pushDelay[cid].time then
+        pushDelay[cid].time = 0
+        pushDelay[cid].items = 0
+    end
+
+    if pushDelay[cid].items > config.maxItemsPerSeconds then
+        pushDelay[cid].time = currentTime + config.exhaustTime
+    end
+
+    if pushDelay[cid].time > currentTime then
+        self:sendCancelMessage("You can't move that item so fast.")
+        return false
+    end
+
+    return true
+end
+
 function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, toCylinder)
 	--- LIONS ROCK START 
 	if self:getStorageValue(lionrock.storages.playerCanDoTasks) - os.time() < 0 then
@@ -307,6 +355,11 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
 		end
 	end
 
+	-- No move gold pounch
+	if item:getId() == GOLD_POUNCH then
+		self:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
+		return false
+	end
 	-- No move items with actionID 8000
 	if item:getActionId() == NOT_MOVEABLE_ACTION then
 		self:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
@@ -395,8 +448,8 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
 		return false
 	end
 
-	-- No move if item count > 26 items
-	if tile and tile:getItemCount() > 26 then
+	-- No move if item count > 20 items
+	if tile and tile:getItemCount() > 20 then
 		self:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
 		return false
 	end
@@ -404,6 +457,10 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
 	if tile and tile:getItemById(370) then -- Trapdoor
 		self:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
 		self:getPosition():sendMagicEffect(CONST_ME_POFF)
+		return false
+	end
+
+	if not antiPush(self, item, count, fromPosition, toPosition, fromCylinder, toCylinder) then
 		return false
 	end
 
@@ -717,6 +774,23 @@ function Player:onGainExperience(source, exp, rawExp)
 
 	-- Exp Boost Modifier
 	useStaminaXp(self)
+
+	-- Exp stats
+	local staminaMinutes = self:getStamina()
+	local Boost = self:getExpBoostStamina()
+	if staminaMinutes > 2400 and self:isPremium() and Boost > 0 then
+		self:setBaseXpGain(200) -- 200 = 1.0x, 200 = 2.0x, ... premium account		
+	elseif staminaMinutes > 2400 and self:isPremium() and Boost <= 0 then
+		self:setBaseXpGain(150) -- 150 = 1.0x, 150 = 1.5x, ... premium account	
+	elseif staminaMinutes <= 2400 and staminaMinutes > 840 and self:isPremium() and Boost > 0 then
+		self:setBaseXpGain(150) -- 150 = 1.5x		premium account
+	elseif staminaMinutes > 840 and Boost > 0 then
+		self:setBaseXpGain(150) -- 150 = 1.5x		free account
+	elseif staminaMinutes <= 840 and Boost > 0 then
+		self:setBaseXpGain(100) -- 50 = 0.5x	all players	
+	elseif staminaMinutes <= 840 then
+		self:setBaseXpGain(50) -- 50 = 0.5x	all players	
+	end
 
 	-- Stamina modifier
 	if configManager.getBoolean(configKeys.STAMINA_SYSTEM) then

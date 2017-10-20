@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="A Shielded Astral Glyph" nameDescription="A Shielded Astral Glyph" race="undead" experience="0" speed="0" manacost="0">
 	<health now="10000" max="10000" />
-	<look typeex="27077" />
+	<look typeex="26894" />
 	<targetchange interval="2000" chance="0" />
 	<flags>
 		<flag summonable="0" />

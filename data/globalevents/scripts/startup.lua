@@ -8,7 +8,10 @@ function onStartup()
 
 	local time = os.time()
 	db.asyncQuery('TRUNCATE TABLE `players_online`')
-	
+
+	-- zerar storages e permitir compra de boost na store
+	db.query('UPDATE `player_storage` SET `value` = 0 WHERE `player_storage`.`key` = 51052')
+
 	-- deletar as guilds canceladas e rejeitadas
 	db.asyncQuery('DELETE FROM `guild_wars` WHERE `status` = 2')
 	db.asyncQuery('DELETE FROM `guild_wars` WHERE `status` = 3')

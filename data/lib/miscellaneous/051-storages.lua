@@ -1030,5 +1030,7 @@ GlobalStorage = {
 		AshmunrahSwitchesGlobalStorage = 202
 	},
 	NaginataStone = 50058,
+	ExpBoost = 51052,
 	SwordOfFury = 5635
+
 }

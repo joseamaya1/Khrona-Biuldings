@@ -60,7 +60,6 @@
 	<talkaction words="!online" script="online.lua" />
 	<talkaction words="!serverinfo" script="serverinfo.lua" />
 	<talkaction words="!report" separator=" " script="adminreport.lua"/>
-	<talkaction words="!ownbp" script="ownbp.lua"/>
 
 	<!-- Cast System -->
 	<talkaction words="!cast" separator=" " script="start_cast.lua" />

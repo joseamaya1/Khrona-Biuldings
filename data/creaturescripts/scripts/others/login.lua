@@ -57,6 +57,7 @@ local events = {
 	'SpikeTaskQuestCrystal',
 	'SpikeTaskQuestDrillworm',
 	'petlogin',
+	'Idle',
 	'petthink'
 }
  
@@ -188,17 +189,17 @@ function onLogin(player)
     	messageType = MESSAGE_EVENT_ADVANCE
     end
 
-    if Game.getStorageValue(GlobalStorage.FuryGates, (9710)) == 1 then
+    if Game.getStorageValue(9710) == 1 then
         player:sendTextMessage(messageType or MESSAGE_STATUS_CONSOLE_BLUE, 'Fury Gate is on Venore Today.')
-    elseif Game.getStorageValue(GlobalStorage.FuryGates, (9711)) == 2 then
+    elseif Game.getStorageValue(9711) == 2 then
         player:sendTextMessage(messageType or MESSAGE_STATUS_CONSOLE_BLUE, 'Fury Gate is on Abdendriel Today.')
-    elseif Game.getStorageValue(GlobalStorage.FuryGates, (9712)) == 3 then
+    elseif Game.getStorageValue(9712) == 3 then
         player:sendTextMessage(messageType or MESSAGE_STATUS_CONSOLE_BLUE, 'Fury Gate is on Thais Today.')
-    elseif Game.getStorageValue(GlobalStorage.FuryGates, (9713)) == 4 then
+    elseif Game.getStorageValue(9713) == 4 then
         player:sendTextMessage(messageType or MESSAGE_STATUS_CONSOLE_BLUE, 'Fury Gate is on Carlin Today.')
-    elseif Game.getStorageValue(GlobalStorage.FuryGates, (9714)) == 5 then
+    elseif Game.getStorageValue(9714) == 5 then
         player:sendTextMessage(messageType or MESSAGE_STATUS_CONSOLE_BLUE, 'Fury Gate is on Edron Today.')
-    elseif Game.getStorageValue(GlobalStorage.FuryGates, (9716)) == 6 then
+    elseif Game.getStorageValue(9716) == 6 then
         player:sendTextMessage(messageType or MESSAGE_STATUS_CONSOLE_BLUE, 'Fury Gate is on Kazordoon Today.')
     end
 
@@ -208,7 +209,8 @@ function onLogin(player)
     for i = 1, #events do
         player:registerEvent(events[i])
     end
- 	
+ 
+ 
     if player:getStorageValue(Storage.combatProtectionStorage) <= os.time() then
         player:setStorageValue(Storage.combatProtectionStorage, os.time() + 10)
         onMovementRemoveProtection(playerId, player:getPosition(), 10)

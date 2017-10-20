@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Shadow Tentacle" nameDescription="a Shadow Tentacle" race="blood" experience="1600" speed="150" manacost="290">
-	<health now="2" max="2" />
+<monster name="Shadow Tentacle" nameDescription="a Shadow Tentacle" race="blood" experience="2100" speed="150" manacost="290">
+	<health now="1200" />
 	<look type="681" corpse="27480" />
 	<targetchange interval="5000" chance="0" />
 	<flags>

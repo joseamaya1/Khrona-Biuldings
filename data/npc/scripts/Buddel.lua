@@ -20,6 +20,6 @@ addTravelKeyword('tyrsung', 'Tyrsung where the Venoran hunters have their settle
 addTravelKeyword('camp', 'the south of Hrodmir where the camps of the barbarians are located. kay?', Position(32021, 31294, 7))
 
 -- Kick
-keywordHandler:addKeyword({'kick'}, StdModule.kick, {npcHandler = npcHandler, text = 'Get out o\' here!*HICKS*', destination = {Position(32255, 31193, 7), Position(32256, 31193, 7), Position(32257, 31193, 7)}})
+--keywordHandler:addKeyword({'kick'}, StdModule.kick, {npcHandler = npcHandler, text = 'Get out o\' here!*HICKS*', destination = {Position(32255, 31193, 7), Position(32256, 31193, 7), Position(32257, 31193, 7)}})
 
 npcHandler:addModule(FocusModule:new())

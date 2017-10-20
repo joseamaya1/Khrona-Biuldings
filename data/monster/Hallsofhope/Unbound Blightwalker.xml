@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Unbound Blightwalker" nameDescription="a Unbound Blightwalker" race="blood" experience="1600" speed="150" manacost="290">
 	<health now="2" max="2" />
-	<look type="246" corpse="27480" />
+	<look type="246" corpse="6354" />
 	<targetchange interval="5000" chance="0" />
 	<flags>
 		<flag summonable="0" />

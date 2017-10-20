@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <globalevents>
+
+	<!-- Mount Rent -->
+	<globalevent name="CheckMount" interval="60000" script="mount_rent.lua"/>
+
 	<!-- Bosses Quests -->
     <globalevent name="Obujos" time="17:59:00" script="bosses/Obujos.lua"/>
     <globalevent name="Tanjis" time="14:59:00" script="bosses/Tanjis.lua"/>

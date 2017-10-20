@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="The Distorted Astral Source" nameDescription="The Distorted Astral Source" race="undead" experience="0" speed="0" manacost="0">
 	<health now="100" max="100" />
-	<look typeex="26780" />
+	<look typeex="26897" />
 	<targetchange interval="2000" chance="0" />
 	<flags>
 		<flag summonable="0" />

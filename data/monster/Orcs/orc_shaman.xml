@@ -59,5 +59,6 @@
 		<item name="broken shamanic staff" chance="10300" />
 		<item name="shamanic hood" chance="6860" />
 		<item name="orc leather" chance="4300" />
+		<item id="26654" chance="1000" /> <!-- heavy old tome -->
 	</loot>
 </monster>

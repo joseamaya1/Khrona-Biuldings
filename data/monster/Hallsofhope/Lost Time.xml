@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Lost Time" nameDescription="a Lost Time" race="undead" experience="0" speed="0" manacost="0">
 	<health now="100" max="100" />
-	<look typeex="26381" />
+	<look typeex="27631" />
 	<targetchange interval="2000" chance="0" />
 	<flags>
 		<flag summonable="0" />

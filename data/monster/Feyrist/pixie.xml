@@ -50,12 +50,12 @@
 		<item name="wooden spellbook" chance="92" />
 		<item name="dream blossom staff" chance="92" />
 		<item name="mandrake" chance="50" />
-		<item name="magic light wand" chance="492" />
+		<item id="2162" chance="492" />
 		<item name="green mushroom" countmax="4" chance="492" />
 		<item name="small enchanted sapphire" countmax="2" chance="492" />
 		<item name="rainbow quartz" countmax="3" chance="719" />
 		<item name="colourful snail shell" chance="719" />
-		<item name="star herbs" chance="719" />
+		<item name="star herb" chance="719" />
 		<item name="leaf star" countmax="8" chance="10000" />
 		<item name="red rose" chance="30100" />
 		<item name="strong health potion" countmax="2" chance="6800" />

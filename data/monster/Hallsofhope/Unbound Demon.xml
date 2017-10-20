@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Unbound Demon" nameDescription="a Unbound Demon" race="blood" experience="1600" speed="150" manacost="290">
-	<health now="2" max="2" />
-	<look type="35" corpse="27480" />
+	<health now="10000" max="10000" />
+	<look type="35" corpse="5995" />
 	<targetchange interval="5000" chance="0" />
 	<flags>
 		<flag summonable="0" />

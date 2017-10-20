@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Unbeatable Dragon" nameDescription="a Unbeatable Dragon" race="blood" experience="1600" speed="150" manacost="290">
-	<health now="2" max="2" />
-	<look type="204" corpse="27480" />
+	<health now="12000" max="12000" />
+	<look type="204" corpse="5984" />
 	<targetchange interval="5000" chance="0" />
 	<flags>
 		<flag summonable="0" />

@@ -14,14 +14,7 @@ local config = {
 		["carlin"] = 4,
 		["ab dendriel"] = 5,
 		["abdendriel"] = 5,
-		["ab'dendriel"] = 5,
-		["liberty bay"] = 7,
-		["port hope"] = 8,
-		["ankrahmun"] = 9,
-		["darashia"] = 10,
-		["edron"] = 11,
-		["svargrond"] = 12,
-		["yalahar"] = 13
+		["ab'dendriel"] = 5
 	},
 
 	vocations = {

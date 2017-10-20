@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Cosmic Energy Prism A" nameDescription="Cosmic Energy Prism A" race="undead" experience="840" speed="0" manacost="0">
 	<health now="1000" max="1000" />
-	<look typeex="26665" corpse="26677" />
+	<look typeex="26689" corpse="26665" />
 	<targetchange interval="2000" chance="0" />
 	<flags>
 		<flag summonable="0" />

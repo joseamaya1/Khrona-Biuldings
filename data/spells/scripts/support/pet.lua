@@ -1,50 +1,48 @@
---Script By Igor Labanca
-function onCastSpell(creature, variant)
-		
-	local STORAGE_PET = 60045
-		
-	    vocationid = creature:getVocation():getId()
-	        if  vocationid == 5 then
-				pet = "thundergiant"
-			
-			elseif vocationid == 6 then
-				pet = "grovebeast"
-			
-			elseif vocationid == 7 then
-				pet = "emberwing"
+function removePet(creatureId)
+    local c = Creature(creatureId)
+    if not c then return false end
 
-			elseif vocationid == 8 then
-				pet = "skullfrost"
-		end
-            
-	local monsterType = MonsterType(pet)
-	
-		if not monsterType:isPet() then
-			creature:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
-			creature:getPosition():sendMagicEffect(CONST_ME_POFF)
+    c:remove()
+end
 
-			
-		if #creature:getSummons() >= 1 then
-			creature:sendCancelMessage("You cannot summon more creatures.")
-			creature:getPosition():sendMagicEffect(CONST_ME_POFF)
-			return false
-			end
-	end
-	
-	local position = creature:getPosition()
-	local summonpet = Game.createMonster(pet,position)
-	if not summonpet then
-		creature:sendCancelMessage(RETURNVALUE_NOTENOUGHROOM)
-		position:sendMagicEffect(CONST_ME_POFF)
-		return false
-	end
+local combat = createCombatObject()
+setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_NONE)
+setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_BLOCKHIT)
 
-	creature:addSummon(summonpet)
-	position:sendMagicEffect(CONST_ME_MAGIC_BLUE)
-	
-	local timestorage = 900 --15 minutes
-	creature:setStorageValue(STORAGE_PET,0)
-	creature:setStorageValue(STORAGE_PET,os.time()+timestorage)
-	return true
-	
+local area = createCombatArea(AREA_CROSS1X1)
+setCombatArea(combat, area)
+
+function onCastSpell(cid, var)
+	local player = Player(cid)
+	if not player then return false end
+
+    if #player:getSummons() >= 1 then
+        player:sendCancelMessage("You can't have other summons.")
+        player:getPosition():sendMagicEffect(CONST_ME_POFF)
+    	return false
+    end
+
+    vocationId = player:getVocation():getId()
+    summonName = nil
+    if vocationId == 1 or vocationId == 5 then
+        summonName = "thundergiant"
+    elseif vocationId == 2 or vocationId == 6 then
+        summonName = "grovebeast"
+    elseif vocationId == 3 or vocationId == 7 then
+        summonName = "emberwing"
+    elseif vocationId == 4 or vocationId == 8 then
+        summonName = "skullfrost"
+    end
+    
+    if not summonName then return false end
+
+    local mySummon = Game.createMonster(summonName, player:getPosition(), true, true)
+    if not mySummon then
+        return combat:execute(player, var)
+    end
+
+    player:addSummon(mySummon)
+    player:say("My Power your Power", TALKTYPE_MONSTER_SAY)
+    addEvent(removePet, 15*60*1000, mySummon:getId())
+    return combat:execute(player, var)
 end

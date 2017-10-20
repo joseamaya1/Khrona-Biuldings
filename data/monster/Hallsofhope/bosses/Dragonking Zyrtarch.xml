@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Dragonking Zyrtarch" nameDescription="a Dragonking Zyrtarch" race="blood" experience="1600" speed="150" manacost="290">
 	<health now="10000" max="10000" />
-	<look type="938" corpse="27721" />
+	<look type="938" corpse="27733" />
 	<targetchange interval="5000" chance="0" />
 	<flags>
 		<flag summonable="0" />

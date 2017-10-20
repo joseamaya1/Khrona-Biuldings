@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Lloyd" nameDescription="a lloyd" race="blood" experience="66000" speed="400" manacost="0">
 	<health now="64000" max="64000" />
-	<look type="940"  corpse="27164" />
+	<look type="940"  corpse="27595" />
 	<targetchange interval="4000" chance="20" />
 	<flags>
 		<flag summonable="0" />

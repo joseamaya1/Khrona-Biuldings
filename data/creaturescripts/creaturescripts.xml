@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <creaturescripts>
     
+	<!-- Mount Rent -->
+	<event type="login" name="checkmounts" script="mount_rent.lua"/>
+	
     <!-- New Summons (Pets) -->	
     <event type="login" name="petlogin" script="pet.lua"/>
     <event type="think" name="petthink" script="pet.lua" />
@@ -76,7 +79,6 @@
 
 	<!-- Recompense by level -->
 	<event type="advance" name="Recompense" script="others/recompense.lua"/>
-	<event type="login" name="bless1" script="freeblesslowlevel.lua"/>
 	
     <!-- ragingmagetower -->
 	<event type="kill" name="Yielothax" script="ragingmagetower/yielothax.lua"/>
@@ -134,6 +136,8 @@
 	<event type="kill" name="PythiusTheRotten" script="others/PythiusTheRotten.lua" />
 
 	<!-- Others -->
+	<event type="think" name="Idle" event="script" value="idle.lua"/>
+	<event type="login" name="AdventurerBlessings" script="adventureblessings.lua"/>
 	<event type="healthchange" name="ImpactAnalyzer" script="others/impact_analyzer.lua" />
 	<event type="login" name="PlayerLogin" script="others/login.lua" />
 	<event type="login" name="AntiMc" script="others/antimc.lua" />
