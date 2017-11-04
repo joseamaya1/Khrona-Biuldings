@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <globalevents>
 
+	<!-- Rainbow Outfit -->
+	<globalevent name="Rainbow" interval="500" script="others/rainbow_outfit.lua"/>
+
 	<!-- Mount Rent -->
 	<globalevent name="CheckMount" interval="60000" script="mount_rent.lua"/>
 
