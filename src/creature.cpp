@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2017  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2019 Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -473,10 +473,11 @@ void Creature::onCreatureMove(Creature* creature, const Tile* newTile, const Pos
 			for (Creature* summon : summons) {
 				const Position& pos = summon->getPosition();
 				if (Position::getDistanceZ(newPos, pos) > 0 || (std::max<int32_t>(Position::getDistanceX(newPos, pos), Position::getDistanceY(newPos, pos)) > 30)) {
-					if (!summon->getMonster()->isPet())
+					if (!summon->getMonster()->isPet()) {
 						despawnList.push_front(summon);
-					else
+					} else {
 						g_game.internalTeleport(summon, summon->getMaster()->getPosition(), true);
+					}
 				}
 			}
 
@@ -819,7 +820,7 @@ BlockType_t Creature::blockHit(Creature* attacker, CombatType_t combatType, int3
 			hasDefense = true;
 		}
 
-		if (checkDefense && hasDefense) {
+		if (checkDefense && hasDefense && canUseDefense) {
 			int32_t defense = getDefense();
 			damage -= uniform_random(defense / 2, defense);
 			if (damage <= 0) {
@@ -860,6 +861,10 @@ BlockType_t Creature::blockHit(Creature* attacker, CombatType_t combatType, int3
 bool Creature::setAttackedCreature(Creature* creature)
 {
 	if (creature) {
+		if (this->getMonster() && this->getMonster()->isPet() && this->getTile()->hasFlag(TILESTATE_PROTECTIONZONE)) {
+			return false;
+		}
+
 		const Position& creaturePos = creature->getPosition();
 		if (creaturePos.z != getPosition().z || !canSee(creaturePos)) {
 			attackedCreature = nullptr;
@@ -1112,22 +1117,28 @@ void Creature::onGainExperience(uint64_t gainExp, Creature* target)
 		return;
 	}
 
-	gainExp /= 2;
-	master->onGainExperience(gainExp, target);
-
-	SpectatorHashSet spectators;
-	g_game.map.getSpectators(spectators, position, false, true);
-	if (spectators.empty()) {
-		return;
+	Monster* m = getMonster();
+	if (!m->isPet()) {
+		gainExp /= 2;
 	}
 
-	TextMessage message(MESSAGE_EXPERIENCE_OTHERS, ucfirst(getNameDescription()) + " gained " + std::to_string(gainExp) + (gainExp != 1 ? " experience points." : " experience point."));
-	message.position = position;
-	message.primary.color = TEXTCOLOR_WHITE_EXP;
-	message.primary.value = gainExp;
+	master->onGainExperience(gainExp, target);
 
-	for (Creature* spectator : spectators) {
-		spectator->getPlayer()->sendTextMessage(message);
+	if (!m->isPet()) {
+		SpectatorHashSet spectators;
+		g_game.map.getSpectators(spectators, position, false, true);
+		if (spectators.empty()) {
+			return;
+		}
+
+		TextMessage message(MESSAGE_EXPERIENCE_OTHERS, ucfirst(getNameDescription()) + " gained " + std::to_string(gainExp) + (gainExp != 1 ? " experience points." : " experience point."));
+		message.position = position;
+		message.primary.color = TEXTCOLOR_WHITE_EXP;
+		message.primary.value = gainExp;
+
+		for (Creature* spectator : spectators) {
+			spectator->getPlayer()->sendTextMessage(message);
+		}
 	}
 }
 
@@ -1425,15 +1436,18 @@ int64_t Creature::getEventStepTicks(bool onlyDelay) const
 	return ret;
 }
 
-void Creature::getCreatureLight(LightInfo& light) const
+LightInfo Creature::getCreatureLight() const
 {
-	light = internalLight;
+	return internalLight;
+}
+
+void Creature::setCreatureLight(LightInfo lightInfo) {
+	internalLight = std::move(lightInfo);
 }
 
 void Creature::setNormalCreatureLight()
 {
-	internalLight.level = 0;
-	internalLight.color = 0;
+	internalLight = {};
 }
 
 bool Creature::registerCreatureEvent(const std::string& name)
